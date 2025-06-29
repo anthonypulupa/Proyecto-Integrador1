@@ -1,0 +1,8 @@
+ec\edu\espoch\jalec\modelo\Producto.class
+ec\edu\espoch\jalec\modelo\Proveedor.class
+ec\edu\espoch\jalec\modelo\Cliente.class
+ec\edu\espoch\jalec\Jalec.class
+ec\edu\espoch\jalec\modelo\Movimiento.class
+ec\edu\espoch\jalec\controlador\controladorProducto.class
+ec\edu\espoch\jalec\controlador\controladorProveedor.class
+ec\edu\espoch\jalec\controlador\controladorCliente.class
