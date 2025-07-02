@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ec.edu.espoch.jalec.vista;
-import ec.edu.espoch.jalec.vista.PantallaPrincipal;
+import ec.edu.espoch.jalec.vista.Configuracion;
 import ec.edu.espoch.jalec.vista.Soporte;
 
 /**
@@ -36,6 +36,8 @@ public class vista extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         mnAgregarT = new javax.swing.JMenuItem();
+        mnAgregarT1 = new javax.swing.JMenuItem();
+        mnAgregarT3 = new javax.swing.JMenuItem();
         mnSalir = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
@@ -53,13 +55,13 @@ public class vista extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
                 .addContainerGap())
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, escritorioLayout.createSequentialGroup()
-                .addContainerGap(457, Short.MAX_VALUE)
+                .addContainerGap(520, Short.MAX_VALUE)
                 .addGroup(escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -68,13 +70,29 @@ public class vista extends javax.swing.JFrame {
 
         jMenu2.setText("MENÚ");
 
-        mnAgregarT.setText("Pantalla Principal");
+        mnAgregarT.setText("Configuracion");
         mnAgregarT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnAgregarTActionPerformed(evt);
             }
         });
         jMenu2.add(mnAgregarT);
+
+        mnAgregarT1.setText("Producto");
+        mnAgregarT1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnAgregarT1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnAgregarT1);
+
+        mnAgregarT3.setText("Inventario");
+        mnAgregarT3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnAgregarT3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnAgregarT3);
 
         mnSalir.setText("Salir");
         mnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -92,13 +110,11 @@ public class vista extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -110,14 +126,26 @@ public class vista extends javax.swing.JFrame {
     }//GEN-LAST:event_mnSalirActionPerformed
 
     private void mnAgregarTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAgregarTActionPerformed
-        PantallaPrincipal verventana = new PantallaPrincipal();
+        Configuracion verventana = new Configuracion();
         escritorio.add(verventana);
         verventana.show();
     }//GEN-LAST:event_mnAgregarTActionPerformed
+
+    private void mnAgregarT1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAgregarT1ActionPerformed
+        // TODO add your handling code here:
+        
+        Producto verventana = new Producto();
+        escritorio.add(verventana);
+        verventana.show();
+    }//GEN-LAST:event_mnAgregarT1ActionPerformed
+
+    private void mnAgregarT3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAgregarT3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnAgregarT3ActionPerformed
      StringBuilder soport = new StringBuilder();
      Soporte soporte = new Soporte();
         
-
+     
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel escritorio;
@@ -127,6 +155,8 @@ public class vista extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JMenuItem mnAgregarT;
+    private javax.swing.JMenuItem mnAgregarT1;
+    private javax.swing.JMenuItem mnAgregarT3;
     private javax.swing.JMenuItem mnSalir;
     // End of variables declaration//GEN-END:variables
 }

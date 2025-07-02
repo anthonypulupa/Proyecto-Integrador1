@@ -4,7 +4,8 @@
  */
 package ec.edu.espoch.jalec.vista;
 
-import ec.edu.espoch.jalec.vista.PantallaPrincipal;
+import ec.edu.espoch.jalec.vista.Configuracion;
+import javax.swing.JOptionPane;
 
 
 
@@ -12,12 +13,12 @@ import ec.edu.espoch.jalec.vista.PantallaPrincipal;
  *
  * @author anthony
  */
-public class PantallaPrincipal extends javax.swing.JInternalFrame {
+public class Configuracion extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form AgregarTarea
      */
-    public PantallaPrincipal() {
+    public Configuracion() {
         initComponents();
     }
 
@@ -36,12 +37,12 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
         lblMoneda = new javax.swing.JLabel();
         lblDescripcion = new javax.swing.JLabel();
         txtTexto1 = new javax.swing.JTextField();
-        jrCompletada = new javax.swing.JRadioButton();
         jbAgregarT = new javax.swing.JButton();
         jbLimpiar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         txtTexto2 = new javax.swing.JComboBox<>();
         txtTexto3 = new javax.swing.JComboBox<>();
+        SAlir = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -62,9 +63,6 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
                 txtTexto1ActionPerformed(evt);
             }
         });
-
-        buttonGroup1.add(jrCompletada);
-        jrCompletada.setText("Completada");
 
         jbAgregarT.setText("Soporte/Ayuda");
         jbAgregarT.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +95,13 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
 
         txtTexto3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        SAlir.setText("Salir");
+        SAlir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SAlirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,16 +130,13 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtTexto3, javax.swing.GroupLayout.Alignment.LEADING, 0, 231, Short.MAX_VALUE)
-                            .addComponent(txtTexto2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jbAgregarT)
-                                .addGap(43, 43, 43)))))
+                                .addComponent(SAlir)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbAgregarT))
+                            .addComponent(txtTexto3, javax.swing.GroupLayout.Alignment.LEADING, 0, 231, Short.MAX_VALUE)
+                            .addComponent(txtTexto2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(20, 36, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jrCompletada)
-                .addGap(185, 185, 185))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,12 +156,11 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDescripcion)
                     .addComponent(txtTexto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(jrCompletada)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAgregarT)
-                    .addComponent(jbLimpiar))
+                    .addComponent(jbLimpiar)
+                    .addComponent(SAlir))
                 .addGap(48, 48, 48))
         );
 
@@ -179,7 +180,7 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
 
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
         // TODO add your handling code here:
-        salir();
+        this.dispose();
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -190,6 +191,16 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
     private void txtTexto2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_txtTexto2ItemStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTexto2ItemStateChanged
+
+    private void SAlirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SAlirActionPerformed
+        // TODO add your handling code here:
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Desea salir de la aplicación?", "Confirmar Salida", JOptionPane.YES_NO_OPTION);
+        if (opcion == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+        
+         
+    }//GEN-LAST:event_SAlirActionPerformed
     public void salir(){
     
     txtTexto1.setText("");
@@ -200,11 +211,11 @@ public class PantallaPrincipal extends javax.swing.JInternalFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton SAlir;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jbAgregarT;
     private javax.swing.JButton jbLimpiar;
-    private javax.swing.JRadioButton jrCompletada;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblMoneda;
