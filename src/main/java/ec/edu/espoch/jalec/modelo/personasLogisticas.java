@@ -14,7 +14,7 @@ public class personasLogisticas {
     private String producto;
     private String categoria;
     private String cantidad;
-    private String tipo; // Entrada o Salida
+    private String tipo;
 
     public personasLogisticas(String fecha, String producto, String categoria, String cantidad, String tipo) {
         this.fecha = fecha;

@@ -4,7 +4,8 @@
 
 package ec.edu.espoch.jalec;
 
-import ec.edu.espoch.jalec.vista.Vista;
+import ec.edu.espoch.jalec.vista.vista;
+
 
 /**
  *
@@ -14,8 +15,10 @@ public class Jalec {
 
     public static void main(String[] args) {
 
-        Vista Vista = new Vista();
+      
+        vista Vista = new vista();
         Vista.setVisible(true);
+        
     }
 }
 
